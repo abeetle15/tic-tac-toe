@@ -31,20 +31,17 @@ export const Dom = (function () {
       case 'illegal':
         alertText.textContent = `${subject}, you can't move there!`;
         alertBtn.textContent = "I get it";
+        alertBtn.removeEventListener('click', Board.endGame);
         break;
       case 'win':
         alertText.textContent = `${subject} won the game!`;
         alertBtn.textContent = "Reset";
-        alertBtn.addEventListener('click', ()=> {
-          Board.endGame()
-        });
+        alertBtn.addEventListener('click', Board.endGame);
         break
       case 'tie':
         alertText.textContent = "It's a tie you guys";
         alertBtn.textContent = "Reset";
-        alertBtn.addEventListener('click', ()=> {
-          Board.endGame()
-        });
+        alertBtn.addEventListener('click', Board.endGame);
         break
     }
     currentDisplay.classList.add('hide');

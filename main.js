@@ -8,8 +8,3 @@ export const alertBtn = document.querySelector('#alert-btn');
 export const currentDisplay = document.querySelector('#current-display');
 export const currentToken = document.querySelector('#token-display');
 Dom.addSquareListeners();
-
-console.log(`que me falta:
-  -jugador activo;
-    `)
-

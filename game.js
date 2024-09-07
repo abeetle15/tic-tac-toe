@@ -25,6 +25,7 @@ export const Board = (function() {
   }
 
   const checkEnd = function() {
+    let winflag = false;
     // wins
     winningCombinations.forEach(combination => {
       const currentCombination = [];
@@ -34,7 +35,7 @@ export const Board = (function() {
       });
       if (currentCombination.every(element => element === Board.activePlayer.token)) {
         Dom.alertDisplay('win', Board.activePlayer.token)
-        return
+        winflag = true;
       }
     })
     // ties
@@ -46,7 +47,7 @@ export const Board = (function() {
       }
     }
 
-    if (!allSquares.includes(null)) {
+    if (!allSquares.includes(null) && !winflag) {
       Dom.alertDisplay('tie')
       return
     }
