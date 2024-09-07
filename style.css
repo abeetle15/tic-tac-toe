@@ -1,0 +1,139 @@
+/* --Josh's Custom CSS Reset https://www.joshwcomeau.com/css/custom-css-reset/--*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+/* --------------------------------- Global --------------------------------- */
+@font-face {
+  font-family: sigma;
+  src: url(./graphic-design/fonts/Sigma_RM_9x14.woff);
+}
+@font-face {
+  font-family: cordata;
+  src: url(./graphic-design/fonts/Cordata-cool_zero.woff);
+}
+
+:root {
+  --primary: rgb(255, 225, 0);
+  --x: rgb(255, 0, 200);
+  --o: rgb(0, 225, 255);
+}
+
+body {
+  background: url(./graphic-design/images/old_web/sky_040\ copy.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100svh;
+  font-family: cordata, monospace;
+}
+
+/* -------------------------------- selectors ------------------------------- */
+
+h1 {
+  padding: 1rem;
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+#grid-container {
+  width: min(70vw, 70svh);
+  height: min(70vw, 70svh);
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(3, 1fr); 
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3.5rem;
+}
+
+#alert-container {
+  margin-top: 2rem;
+  width: 80vw;
+  height: fit-content;
+  background-color: var(--primary);
+  border: solid 5px var(--x);
+  padding: 0.5rem;
+  display: none;
+}
+
+#alert-text {
+  color: var(--x);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+#alert-btn {
+  margin: auto;
+  
+}
+
+#alert-container.active {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+#current-display {
+  margin-top: 50px;
+  color: white;
+  font-size: 2rem;
+}
+
+#current-display.hide {
+  display: none;
+}
+
+#token-display {
+  color: var(--primary);
+}
+
+img {
+  margin-top: 4rem;
+}
+
+#one,
+#two,
+#four,
+#five,
+#seven,
+#eight {
+  border-right: solid 5px var(--primary);
+}
+
+#one,
+#two,
+#three,
+#four,
+#five,
+#six {
+  border-bottom: solid 5px var(--primary);;
+}
